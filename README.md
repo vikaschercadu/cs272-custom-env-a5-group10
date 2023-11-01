@@ -21,5 +21,4 @@
 <!-- See the Cart Pole Env example https://gymnasium.farama.org/environments/classic_control/cart_pole/ -->
 
 ## Results
-- Use a 
 
