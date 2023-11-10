@@ -28,3 +28,7 @@
 
 # Visualization via tensorboard
 ```tensorboard --logdir=~/ray_results```
+
+
+# Custom Env Reference
+- [Farama gymnasium](https://gymnasium.farama.org/tutorials/gymnasium_basics/environment_creation/)
