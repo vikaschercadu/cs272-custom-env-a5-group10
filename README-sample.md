@@ -37,6 +37,8 @@ When the average speed of vehicles in the priority lane becomes less than 50 mil
 ## RL Algorithm 
 We use PPO. Briefly explain the category such as off-policy, policy gradient-based approach... Cite a paper.
 
+We are going to use the ray rllib implementation. Describe important parameters and configurations.
+
 
 ## Starting State [if applicable]
 <!-- See the Cart Pole Env example https://gymnasium.farama.org/environments/classic_control/cart_pole/ -->
