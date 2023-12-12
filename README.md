@@ -26,15 +26,15 @@ Allocate More Beds: An action aimed at increasing the number of beds available f
 ### Rewards
 Rewards are given based on reducing patient waiting times and efficient resource usage.
 
-###Training Process
+### Training Process
 
 The training process involves iterative learning, with each iteration enhancing the agent's policy based on its performance in the hospital environment. The agent learns to manage the allocation of doctors and beds to minimize patient waiting times and maximize resource utilization. Training halts either after a predefined number of iterations or when the agent consistently achieves a high reward, indicating a successful policy.
 
-###Starting State
+### Starting State
 
 At the beginning of each episode, the hospital environment is initialized to a predefined neutral state. The number of waiting patients, available doctors, and beds are set based on random initialization. The average waiting time starts at 0, and the simulation begins at 8 AM. This consistent starting state provides a baseline for the agent to make decisions regarding resource allocation and patient treatment throughout the episode.
 
-###Episode End
+### Episode End
 
 An episode concludes under two conditions:
 
