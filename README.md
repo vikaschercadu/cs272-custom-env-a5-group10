@@ -25,7 +25,7 @@ Allocate More Beds: An action aimed at increasing the number of beds available f
 Rewards are given based on reducing patient waiting times and efficient resource usage.
 
 ## Training
-We use Ray RLlib and PPO to train our agent. The `train_agent.py` script handles the training process and saves the best model.
+We use Ray RLlib and PPO, DQN and APPO to train our agent. The `train_agent.py` script handles the training process and saves the best model.
 
 ### Configuration
 - **Framework**: TensorFlow
@@ -34,27 +34,32 @@ We use Ray RLlib and PPO to train our agent. The `train_agent.py` script handles
 
 ### Stopping Criteria
 - **Iterations**: 50
-- **Target Reward**: 200
+- **Target Reward**: 10000
 
 ## Results
-Training outputs include episode rewards, episode lengths, and episodes per iteration. The CLIReporter provides live metrics during training. The best model's checkpoint path is printed upon completion.
+reward Max and Reward mean plots are included for all the 3 models trained.
 
 ##Proximal Policy Optimization (PPO)
+
 <img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/2811acd0-b2b3-4bcc-ad81-da1180488f9d">
+
 <img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/a8cfc332-c562-4e30-8cd2-6b0cf8aa8883">
 
 ##Asynchronous Proximal Policy Optimization (APPO)
+
 <img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/b0e34985-7cb7-4cda-b1fe-cbe6d4641cd2">
+
 <img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/2946fcb4-e964-413c-ba2a-4f28d2db6866">
 
+##Deep Q Networks (DQN)
+
+<img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/1e8fbfe5-55e1-4683-b16b-8e87f44e8f9a">
+
+<img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/0adee7a4-1269-40b9-8a85-2028f804a35a">
 
 ### Metrics
-- **Episode Reward Mean**: The average reward per episode.
-- **Episode Length Mean**: The average number of steps taken per episode.
-- **Episodes This Iter**: The number of episodes run in the current iteration.
-
-### Evaluation
-Post-training evaluation metrics will be added upon running the evaluation script (coming soon).
+- **Episode Reward Mean**
+- **Episode Reward Max**
 
 ## Usage
 To run the training, execute `python train_agent.py` in the terminal.
