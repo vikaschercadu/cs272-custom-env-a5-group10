@@ -45,15 +45,18 @@ The hospital environment may also terminate an episode if a predefined maximum n
 ## Training and RL Algorithm
 We use Ray RLlib and PPO, DQN and APPO to train our agent. The `train_agent.py` script handles the training process and saves the best model.
 
-#Proximal Policy Optimization (PPO):
+# Proximal Policy Optimization (PPO):
 
   Overview: PPO is a policy optimization algorithm that seeks to find an optimal policy by iteratively updating it while ensuring that     the policy changes are within a safe region.
   Application: We leverage PPO to train our agent to make sequential decisions regarding resource allocation and patient treatment,       optimizing for reduced patient waiting times and efficient resource usage.
-#Deep Q Networks (DQN):
+  
+# Deep Q Networks (DQN):
 
   Overview: DQN is a value-based algorithm that aims to learn the optimal action-value function. It combines aspects of Q-learning with   deep neural networks to approximate the Q-values for state-action pairs.
   Application: In our hospital environment, DQN enables the agent to learn the value of different actions in various states, guiding it   to make decisions that maximize the cumulative rewards over time.
-#Asynchronous Proximal Policy Optimization (APPO):
+
+  
+# Asynchronous Proximal Policy Optimization (APPO):
 
   Overview: APPO is an extension of PPO designed for asynchronous training, making it suitable for parallelizing the learning process     across multiple workers.
   Application: We utilize APPO to take advantage of parallel training, enhancing the efficiency of the learning process by allowing       multiple instances of the agent to learn simultaneously.
