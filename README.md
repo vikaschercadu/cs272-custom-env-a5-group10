@@ -18,7 +18,9 @@ Current Hour: The ongoing hour within the hospital environment.
 Navigating through hospital resource allocation, the agent has three distinct actions at its disposal:
 
 No Action: The agent refrains from taking any immediate action.
+
 Allocate More Doctors: A decision to increase the number of available doctors for patient care.
+
 Allocate More Beds: An action aimed at increasing the number of beds available for patient occupancy.
 
 ### Rewards
