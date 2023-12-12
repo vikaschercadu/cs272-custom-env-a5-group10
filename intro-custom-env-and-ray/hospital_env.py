@@ -41,9 +41,9 @@ class HospitalEnv(gym.Env):
         self.state = np.array([self.num_patients_waiting, self.available_doctors, self.available_beds, self.avg_waiting_time, self.current_hour])
         info = self._get_metrics()
         
-        return self.state, reward, done, info
+        return self.state, reward, done, done, info 
 
-    def reset(self):
+    def reset(self, *,seed=None, options=None):
         """
         Reset the environment to the initial state for a new episode.
         """
@@ -54,7 +54,7 @@ class HospitalEnv(gym.Env):
         self.current_hour = 8
 
         self.state = np.array([self.num_patients_waiting, self.available_doctors, self.available_beds, self.avg_waiting_time, self.current_hour])
-        return self.state
+        return self.state, {}
 
     def _simulate_patient_flow(self):
         """
