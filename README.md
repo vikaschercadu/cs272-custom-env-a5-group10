@@ -97,3 +97,7 @@ reward Max and Reward mean plots are included for all the 3 models trained.
 ## Usage
 To run the training, execute `python train_agent.py` in the terminal.
 
+## Conclusion
+
+In conclusion, our Hospital Resource Management project underscores the efficacy of Reinforcement Learning (RL) in enhancing hospital resource allocation. Through the implementation of Proximal Policy Optimization (PPO), Deep Q Networks (DQN), and Asynchronous Proximal Policy Optimization (APPO), our RL agent adeptly navigates the challenges of optimizing doctor and bed allocation, resulting in minimized waiting times and efficient resource utilization. This success suggests the broader relevance of RL methodologies in addressing real-world complexities. The demonstrated intelligent decision-making paradigm holds promise for extending the application of RL to diverse domains beyond agriculture, making it a valuable approach for improving resource management and operational efficiency in complex environments.
+
