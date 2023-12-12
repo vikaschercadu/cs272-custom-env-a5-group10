@@ -1,27 +1,3 @@
-# Project Name
-## Project Summary
-<!-- Around 200 Words -->
-<!-- Cover (1) What problem you are solving, (2) Who will use this RL module and be happy with the learning, and (3) a brief description of the results -->
-
-## State Space
-<!-- See the Cart Pole Env example https://gymnasium.farama.org/environments/classic_control/cart_pole/ -->
-
-## Action Space
-<!-- See the Cart Pole Env example https://gymnasium.farama.org/environments/classic_control/cart_pole/ -->
-
-## Rewards
-<!-- See the Cart Pole Env example https://gymnasium.farama.org/environments/classic_control/cart_pole/ -->
-
-## RL Algorithm 
-
-## Starting State [if applicable]
-<!-- See the Cart Pole Env example https://gymnasium.farama.org/environments/classic_control/cart_pole/ -->
-
-## Episode End [if applicable]
-<!-- See the Cart Pole Env example https://gymnasium.farama.org/environments/classic_control/cart_pole/ -->
-
-## Results
-
 # Hospital Resource Management
 
 ## Project Summary
@@ -31,10 +7,19 @@ This project simulates a hospital environment where an agent must manage resourc
 The `HospitalEnv` is a custom gymnasium environment encapsulating the challenges of hospital management, including patient intake and resource allocation.
 
 ### State Space
-The state includes the number of waiting patients, available doctors, available beds, average waiting time, and current hour.
+The HospitalEnv boasts a comprehensive state space, encapsulating vital parameters for efficient hospital management:
 
+Waiting Patients: The number of patients currently awaiting treatment.
+Available Doctors: The count of doctors ready for patient care.
+Available Beds: The number of beds ready for patient occupancy.
+Average Waiting Time: The average time patients spend waiting for treatment.
+Current Hour: The ongoing hour within the hospital environment.
 ### Action Space
-The agent can take three actions: no action, allocate more doctors, or allocate more beds.
+Navigating through hospital resource allocation, the agent has three distinct actions at its disposal:
+
+No Action: The agent refrains from taking any immediate action.
+Allocate More Doctors: A decision to increase the number of available doctors for patient care.
+Allocate More Beds: An action aimed at increasing the number of beds available for patient occupancy.
 
 ### Rewards
 Rewards are given based on reducing patient waiting times and efficient resource usage.
@@ -53,6 +38,15 @@ We use Ray RLlib and PPO to train our agent. The `train_agent.py` script handles
 
 ## Results
 Training outputs include episode rewards, episode lengths, and episodes per iteration. The CLIReporter provides live metrics during training. The best model's checkpoint path is printed upon completion.
+
+##Proximal Policy Optimization (PPO)
+<img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/2811acd0-b2b3-4bcc-ad81-da1180488f9d">
+<img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/a8cfc332-c562-4e30-8cd2-6b0cf8aa8883">
+
+##Asynchronous Proximal Policy Optimization (APPO)
+<img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/b0e34985-7cb7-4cda-b1fe-cbe6d4641cd2">
+<img width="402" alt="image" src="https://github.com/vikaschercadu/cs272-custom-env-a5-group10/assets/40718425/2946fcb4-e964-413c-ba2a-4f28d2db6866">
+
 
 ### Metrics
 - **Episode Reward Mean**: The average reward per episode.
