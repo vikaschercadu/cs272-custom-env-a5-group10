@@ -1,6 +1,10 @@
 import ray
 from ray import tune
-from ray.rllib.agents.ppo import PPOTrainer
+from ray.rllib.algorithms.dqn import DQN
+from ray.rllib.algorithms.ppo import PPO
+from ray.rllib.algorithms.appo import APPO
+
+
 from hospital_env import HospitalEnv 
 
 def train_hospital_env():
@@ -17,11 +21,13 @@ def train_hospital_env():
 
     stop_criteria = {
         "training_iteration": 50,
-        "episode_reward_mean": 200,
+        "episode_reward_mean": 10000,
     }
 
     results = tune.run(
-        PPOTrainer, 
+        DQN, 
+        # PPO,
+        # APPO,
         config=config, 
         stop=stop_criteria, 
         progress_reporter=tune.CLIReporter(
@@ -29,8 +35,9 @@ def train_hospital_env():
         ),
     )
 
-    checkpoint_path = results.get_best_checkpoint(trial=results.get_best_trial("episode_reward_mean"))
-    print(f"Best model checkpoint saved at: {checkpoint_path}")
+
+    # checkpoint_path = results.get_best_checkpoint(trial=results.get_best_trial("episode_reward_mean"))
+    # print(f"Best model checkpoint saved at: {checkpoint_path}")
 
 if __name__ == "__main__":
     train_hospital_env()
